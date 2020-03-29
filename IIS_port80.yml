@@ -1,0 +1,17 @@
+---
+
+hosts: all
+
+tasks:
+	- name: Install IIS (Web-Server and Web-Common-Http)
+	  win_feature:
+		name: 
+		- Web-Server
+		- Web-Common-Http
+		state: present
+
+	- name: Add a HTTP binding on port 80
+	  win_iis_webbinding:
+		name: Default Web Site
+		port: 80
+		state: present
