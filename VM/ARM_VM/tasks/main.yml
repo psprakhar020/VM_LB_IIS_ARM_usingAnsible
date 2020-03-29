@@ -8,5 +8,5 @@
     template_link: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-linux/azuredeploy.json'
     parameters_link: "{{ item.Parameter }}"
 loop:
-    - { name: 'mydeployment1', Parameter: ' ' }
-    - { name: 'mydeployment2', Parameter: ' ' }
+    - { name: 'mydeployment1', Parameter: 'https://raw.githubusercontent.com/psprakhar020/VM_LB_IIS_ARM_usingAnsible/master/VM/parameter1.json' }
+    - { name: 'mydeployment2', Parameter: 'https://raw.githubusercontent.com/psprakhar020/VM_LB_IIS_ARM_usingAnsible/master/VM/parameter2.json' }
