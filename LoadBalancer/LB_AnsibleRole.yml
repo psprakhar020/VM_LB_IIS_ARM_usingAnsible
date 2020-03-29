@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  vars:
+    rg_name: "MyRG"
+	lb_name: "MyLB"
+	
+  roles:
+    - AzureLB

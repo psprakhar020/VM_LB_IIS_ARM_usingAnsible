@@ -1,0 +1,36 @@
+---
+
+- name: Create a public ip address
+  azure_rm_publicipaddress:
+    resource_group: "{{ rg_name }}"
+    name: my_public_ip
+    allocation_method: dynamic
+
+- name: Create Load Balancer for port 80
+  azure_rm_loadbalancer:
+    resource_group: "{{ rg_name }}"
+    name: "{{ lb_name }}"
+    frontend_ip_configurations:
+      - name: lb_fe
+        public_ip_address: my_public_ip
+    backend_address_pools:
+      - name: lb_be
+    probes:
+      - name: probe_80
+        port: 80
+        protocol: Http
+    load_balancing_rules:
+      - name: lb_rule
+        frontend_ip_configuration: lb_fe
+        backend_address_pool: lb_be
+        probe: probe_80
+		frontend_port: 80
+        backend_port: 80
+    inbound_nat_pools:
+      - name: lb_inp_name
+        frontend_ip_configuration_name: lb_fe
+        frontend_port_range_start: 80
+        frontend_port_range_end: 81
+	inbound_nat_rules:
+      - name: inboundnatrule0
+        frontend_ip_configuration: lb_fe
