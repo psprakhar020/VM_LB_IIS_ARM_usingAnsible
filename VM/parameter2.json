@@ -10,8 +10,8 @@
         },
         "OSdiskName": {
             "value": "OS2"
-        }
-		"IPconfName": {
+        },
+	"IPconfName": {
             "value": "Con2"
         }
     }
