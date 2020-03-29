@@ -6,33 +6,33 @@
             "type": "String"
         },
         "VMSize": {
-			"defaultValue": "Standard_D2_v2"
+	   "defaultValue": "Standard_D2_v2",
             "type": "String"
         },
         "VMHostName": {
             "type": "String"
         },
         "UserName": {
-			"defaultValue": "test"
+	    "defaultValue": "test",
             "type": "String"
         },
         "Password": {
-			"defaultValue": "P@ssw0rd"
+	    "defaultValue": "P@ssw0rd",
             "type": "SecureString"
         },
-		"Location":{
-			"defaultValue": "uksouth"
-			"type": "String"
-		},
-		"NicName": { 
-			"type": "String"
-		},
-		"OSdiskName": {
-			"type": "String"
-		},		
-		"IPconfName":{
-			"type": "String"
-		}	
+	"Location":{
+	    "defaultValue": "uksouth",
+	    "type": "String"
+	},
+	"NicName": { 
+	    "type": "String"
+	},
+	"OSdiskName": {
+	    "type": "String"
+	},		
+	"IPconfName":{
+	    "type": "String"
+	}	
     },
 	
     "resources": [
