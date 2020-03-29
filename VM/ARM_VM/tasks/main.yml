@@ -3,7 +3,7 @@
 
 - name: Create Azure Deploy
   azure_rm_deployment:
-    resource_group: myResourceGroup
+    resource_group: "{{ rg_name }}"
     name: "{{ item.name }}"
     template_link: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-linux/azuredeploy.json'
     parameters_link: "{{ item.Parameter }}"
