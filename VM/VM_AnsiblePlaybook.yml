@@ -1,4 +1,6 @@
 ---
 - hosts: localhost
+  vars:
+    rg_name: "MyRG"
   roles:
     - ARM_VM
