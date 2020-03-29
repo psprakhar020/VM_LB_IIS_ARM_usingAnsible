@@ -1,0 +1,12 @@
+---
+# tasks file for ARM_VM
+
+- name: Create Azure Deploy
+  azure_rm_deployment:
+    resource_group: myResourceGroup
+    name: "{{ item.name }}"
+    template_link: 'https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-vm-simple-linux/azuredeploy.json'
+    parameters_link: "{{ item.Parameter }}"
+loop:
+    - { name: 'mydeployment1', Parameter: ' ' }
+    - { name: 'mydeployment2', Parameter: ' ' }
