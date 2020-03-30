@@ -16,15 +16,15 @@
     backend_address_pools:
       - name: lb_be
     probes:
-      - name: probe0
+      - name: probe80
         port: 80
         protocol: Http
     load_balancing_rules:
       - name: lb_rule
         frontend_ip_configuration: lb_fe
         backend_address_pool: lb_be
-        probe: probe0
-	frontend_port: 80
+        probe: probe80
+        frontend_port: 80
         backend_port: 80
     inbound_nat_pools:
       - name: lb_inp_name
