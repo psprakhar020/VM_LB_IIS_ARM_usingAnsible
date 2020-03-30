@@ -31,6 +31,6 @@
         frontend_ip_configuration_name: lb_fe
         frontend_port_range_start: 80
         frontend_port_range_end: 81
-	inbound_nat_rules:
+    inbound_nat_rules:
       - name: inboundnatrule0
         frontend_ip_configuration: lb_fe
