@@ -23,7 +23,7 @@
       - name: lb_rule
         frontend_ip_configuration: lb_fe
         backend_address_pool: lb_be
-        probe: probe_80
+        probe: probe1
 	frontend_port: 80
         backend_port: 80
     inbound_nat_pools:
